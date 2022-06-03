@@ -6,6 +6,7 @@ html_base = """
     <ul>
         <li><a href="/">Portada</a></li>
         <li><a href="/about/">Acerca de</a></li>
+        <li><a href="/contact/">Contacto</a></li>
     </ul>
 """
 
@@ -18,5 +19,16 @@ def home(request):
 def about(request):
     return HttpResponse(html_base + """
         <h2>Acerca de</h2>
-        <p>Me llamo Héctor y me encanta Django!</p>
+        <p>Me llamo Jonathan y me agrada Django!</p>
+    """)
+
+def contact(request):
+    return HttpResponse(html_base + """
+        <h2>Contacto</h2>
+        <p>Aquí les dejo mi email y mis redes sociales:</p>
+        <ul>
+            <li><a href="mailto:hola@hektorprofe.net">Email</a></li>
+            <li><a href="https://github.com/thejonacode">Github</a></li>
+            <li><a href="https://youtube.com">Youtube</a></li>
+        </ul>
     """)
